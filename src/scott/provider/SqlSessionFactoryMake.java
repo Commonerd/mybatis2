@@ -9,18 +9,18 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class SqlSessionFactoryMake {
 	private static SqlSessionFactory factory = null;
-	
-	static{
+
+	static {
 		String path = "config.xml";
-		
-		try(InputStream is = Resources.getResourceAsStream(path);){
-			 factory = new SqlSessionFactoryBuilder().build(is);
-		}catch (IOException e) {
+
+		try (InputStream is = Resources.getResourceAsStream(path);) {
+			factory = new SqlSessionFactoryBuilder().build(is);
+		} catch (IOException e) {
 			e.printStackTrace();
-		}	
+		}
 	}
-	
-	public static SqlSessionFactory getFactory(){
+
+	public static SqlSessionFactory getFactory() {
 		return factory;
 	}
 }

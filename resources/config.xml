@@ -5,7 +5,7 @@
 <configuration>
 	<properties resource="db.properties" />
 	<settings>
-	<setting name="jdbcTypeForNull" value="NULL"/>
+		<setting name="jdbcTypeForNull" value="NULL"/>
 	</settings>
 	<environments default="development">
 		<environment id="development">
@@ -19,9 +19,7 @@
 		</environment>
 	</environments>
 	<mappers>
-	<mapper resource="sql/mapper/scott.xml"/>
+		<mapper resource="sql/mapper/scott.xml" />
 	</mappers>
+</configuration> 
 
-
-	
-</configuration>
