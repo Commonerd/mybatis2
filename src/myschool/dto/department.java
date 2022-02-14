@@ -1,19 +1,17 @@
-package scott.dto;
+package myschool.dto;
 
-public class Dept {
-
+public class department {
 	int deptno;
 	String dname;
 	String loc;
 	
-	public Dept() {}
 	
-	public Dept(int deptno, String dname, String loc) {	
+	public department(int deptno, String dname, String loc) {
+		super();
 		this.deptno = deptno;
 		this.dname = dname;
 		this.loc = loc;
 	}
-
 	public int getDeptno() {
 		return deptno;
 	}
@@ -34,6 +32,7 @@ public class Dept {
 	}
 	@Override
 	public String toString() {
-		return "Dept [deptno=" + deptno + ", dname=" + dname + ", loc=" + loc + "]";
+		return "department [deptno=" + deptno + ", dname=" + dname + ", loc=" + loc + "]";
 	}
+	
 }

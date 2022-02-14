@@ -19,7 +19,7 @@
 		</environment>
 	</environments>
 	<mappers>
-		<mapper resource="sql/mapper/scott.xml" />
+		<mapper resource="sql/mapper/professor.xml" />
 	</mappers>
 </configuration> 
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myschool.student">
+	<!-- sql + 매핑정보 -->
+	<insert id="addStudent" parameterType="myschool.dto.Student">
+		<selectKey resultType="int" keyProperty="studno" order="BEFORE">
+		SELECT stud_seq.nextval FROM DUAL
+		</selectKey>
+		insert into student values(#{studno},
+		#{name},#{userid},#{grade},#{idnum},
+		#{birthdate},#{tel},#{height},#{weight},#{deptno},#{profno})
+	</insert>
+	
+	<update id="updateGrade" parameterType="map">
+		update student set grade = #{grade} where studno = #{studno}
+	</update>
+	
+	<select id="studentNo" resultType="myschool.dto.Student" parameterType="int">
+		select studno from student
+	</select>
+
+	<select id="studentName" resultType="myschool.dto.Student" parameterType="string">
+		select * from student where name = #{name}
+	</select>
+	
+	<delete id="deleteStudent" parameterType="int">
+	delete from student where studno = #{studno}	
+	</delete>
+
+</mapper>
